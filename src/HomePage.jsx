@@ -71,21 +71,21 @@ const allProjectImages = {
 const projects = [
   {
     type: "Residential (Completed)",
-    title: "Lake Road Project, Dehiwala",
+    title: "Two Storey Luxury Residence, Attidiya, Sri Lanka",
     year: "Tropical-modern waterside luxury home",
     bg: "bg1",
     folder: "lake-road-dehiwala",
   },
   {
     type: "Hospitality (Completed)",
-    title: "Kalutara Hotel Beachfront Project",
+    title: "Kalutara Luxury Hotel",
     year: "Robust concrete frame, sea-facing balconies",
     bg: "bg2",
     folder: "kalutara-hotel",
   },
   {
     type: "Residential (Ongoing)",
-    title: "Kalawana Luxury Home, Ratnapura",
+    title: "Cost-Effective Housing Project – Kalawana",
     year: "Precision concrete and engineered steel roof structures",
     bg: "bg3",
     folder: "kalawana-ratnapura",
@@ -387,23 +387,18 @@ export default function PetraConstruction() {
 
           {/* ABOUT & TEAM */}
           <section id="about" className="ph-about">
-            <div className="abt-inner">
-              <Reveal>
-                <div className="abt-vis">
-                  <div className="abt-vis-in">
-                    <img src="/my-logo.png" alt="Petra Badge Logo" style={{ width: '64px', height: '64px' }} />
-                  </div>
-                  <div className="abt-acc1" /><div className="abt-acc2" />
-                  <div className="abt-badge">Petra Construction Co. (Pvt.) Ltd.</div>
-                </div>
-              </Reveal>
+            <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(320px, 1fr))", gap: "4rem" }}>
+              {/* LEFT SIDE: Corporate Profile Narrative */}
               <div>
                 <Reveal>
                   <div className="stag">Corporate Profile</div>
                   <h2 className="sh">International Engineering Standards.<br />Meticulous Craftsmanship.</h2>
                   <div className="sdiv" />
-                  <p className="ssub">Founded by an internationally trained civil engineer, Petra was built with a transparent mission: to raise the standard of engineering quality, reliability, and cost-control across Sri Lanka. We remove the guesswork from construction timelines and costing budgets.</p>
+                  <p className="ssub" style={{ marginBottom: "2.5rem" }}>
+                    Founded by an internationally trained civil engineer, Petra was built with a transparent mission: to raise the standard of engineering quality, reliability, and cost-control across Sri Lanka. We remove the guesswork from construction timelines and costing budgets.
+                  </p>
                 </Reveal>
+                
                 <div className="feat-list">
                   {[
                     { ico: "🔩", t: "Engineering Rigour", d: "Every project stage is managed end-to-end by qualified engineers and chartered-route professionals." },
@@ -413,25 +408,37 @@ export default function PetraConstruction() {
                     <Reveal key={i} delay={i + 1}>
                       <div className="feat-row">
                         <div className="feat-ico">{f.ico}</div>
-                        <div><div className="feat-t">{f.t}</div><div className="feat-d">{f.d}</div></div>
+                        <div>
+                          <div className="feat-t">{f.t}</div>
+                          <div className="feat-d">{f.d}</div>
+                        </div>
                       </div>
                     </Reveal>
                   ))}
                 </div>
               </div>
-            </div>
 
-            {/* TEAM INCLUSION SECTION */}
-            <div className="team-section" style={{ marginTop: "5rem" }}>
-              <div className="stag" style={{ marginBottom: "1.5rem" }}>Our Technical Leadership</div>
-              <div style={{ display: "grid", gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))", gap: "2rem" }}>
-                {team.map((t, idx) => (
-                  <div key={idx} style={{ background: "rgba(255,255,255,0.03)", padding: "1.5rem", borderRadius: "8px", border: "1px solid rgba(255,255,255,0.05)" }}>
-                    <div style={{ fontWeight: "bold", color: "#fff", fontSize: "1.1rem" }}>{t.name}</div>
-                    <div style={{ color: "var(--gold, #cfa153)", fontSize: "0.85rem", marginBottom: "0.75rem", textTransform: "uppercase", letterSpacing: "1px" }}>{t.role}</div>
-                    <p style={{ fontSize: "0.85rem", color: "#ccc", lineHeight: "1.5", margin: 0 }}>{t.desc}</p>
-                  </div>
-                ))}
+              {/* RIGHT SIDE: Technical Leadership */}
+              <div>
+                <Reveal>
+                  <div className="stag" style={{ marginBottom: "1.5rem" }}>Our Technical Leadership</div>
+                </Reveal>
+                <div style={{ display: "flex", flexDirection: "column", gap: "1.5rem" }}>
+                  {team.map((t, idx) => (
+                    <Reveal key={idx} delay={idx + 1}>
+                      <div style={{ 
+                        background: "rgba(255,255,255,0.03)", 
+                        padding: "1.5rem", 
+                        borderRadius: "8px", 
+                        border: "1px solid rgba(255,255,255,0.05)" 
+                      }}>
+                        <div style={{ fontWeight: "bold", color: "#fff", fontSize: "1.1rem" }}>{t.name}</div>
+                        <div style={{ color: "var(--gold, #cfa153)", fontSize: "0.85rem", marginBottom: "0.5rem", textTransform: "uppercase", letterSpacing: "1px" }}>{t.role}</div>
+                        <p style={{ fontSize: "0.85rem", color: "#ccc", lineHeight: "1.5", margin: 0 }}>{t.desc}</p>
+                      </div>
+                    </Reveal>
+                  ))}
+                </div>
               </div>
             </div>
           </section>
@@ -482,7 +489,7 @@ export default function PetraConstruction() {
             <div className="ft-brand" onClick={() => go("home")} style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
               PETRA <span>CONSTRUCTION</span>
             </div>
-            <p className="ft-tag" style={{ color: '#aaa', fontSize: '0.85rem' }}>Petra Construction Co. (Pvt.) Ltd.<br />Solid Foundations. Timeless Structures. [2026 Update]</p>
+            <p className="ft-tag" style={{ color: '#aaa', fontSize: '0.85rem' }}>Petra Construction Co. (Pvt.) Ltd.<br />Solid Foundations. Timeless Structures.</p>
           </div>
           <div>
             <div className="ft-ct">Navigation</div>
@@ -511,7 +518,7 @@ export default function PetraConstruction() {
         </div>
         <div className="ft-bot">
           <div className="ft-copy">© 2026 Petra Construction Co. (Pvt.) Ltd. All engineering rights reserved.</div>
-          <div className="ft-badge"><div className="badge-dot" style={{ backgroundColor: "#55efc4" }} />Site Managed by Nimeth</div>
+          <div className="ft-badge"><div className="badge-dot" style={{ backgroundColor: "#55efc4" }} />Site Managed by Nethro Labs</div>
         </div>
       </footer>
     </>
