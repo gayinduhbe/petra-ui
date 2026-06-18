@@ -71,21 +71,21 @@ const allProjectImages = {
 const projects = [
   {
     type: "Residential (Completed)",
-    title: "Lake Road Project, Dehiwala",
+    title: "Two Storey Luxury Residence, Attidiya, Sri Lanka",
     year: "Tropical-modern waterside luxury home",
     bg: "bg1",
     folder: "lake-road-dehiwala",
   },
   {
     type: "Hospitality (Completed)",
-    title: "Kalutara Hotel Beachfront Project",
+    title: "Kalutara Luxury Hotel",
     year: "Robust concrete frame, sea-facing balconies",
     bg: "bg2",
     folder: "kalutara-hotel",
   },
   {
     type: "Residential (Ongoing)",
-    title: "Kalawana Luxury Home, Ratnapura",
+    title: "Cost-Effective Housing Project – Kalawana",
     year: "Precision concrete and engineered steel roof structures",
     bg: "bg3",
     folder: "kalawana-ratnapura",
