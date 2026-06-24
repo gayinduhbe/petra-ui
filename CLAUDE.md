@@ -4,19 +4,33 @@ Guidance for AI agents (and humans) working in this repository.
 
 ## Who maintains this
 
-This site is operated mainly by a **non-technical person**. Optimize for safety and clarity:
+This site is operated by a **non-technical person**. You are the one doing the technical work — they are describing what they want in plain English. Optimize for safety and clarity:
 
-- Explain what you're doing in plain language; avoid unexplained jargon.
+- **Explain in plain language.** Avoid jargon; when a technical term is unavoidable, say what it means in one short sentence. Describe *what* changed and *why it matters to them*, not the implementation details.
+- If something is complex, broken, or risky, slow down and explain the situation simply before acting — what's wrong, what the options are, and what you recommend.
 - Prefer small, reversible changes. Double-check before deleting or overwriting anything.
 - Never break the live contact form or the build. When in doubt, ask before acting.
+- Don't assume the user can run terminal commands. **You** handle all the Git/code/deploy steps; only ask them to do something themselves if it truly requires their account or a manual login.
 
 ## Workflow rules (required)
 
-- **Always use a pull request.** Never commit directly to `main`. Create a branch, open a PR, and merge it.
+**For every code change, run the full cycle yourself — start to finish — without making the user do any Git steps:**
+
+1. Create a new branch (`fix/...`, `chore/...`, `feat/...` — e.g. `fix/emailjs-credentials`).
+2. Make the change and commit it.
+3. Push the branch to GitHub.
+4. Open a pull request (PR).
+5. Merge the PR into `main`.
+6. Sync local `main` afterwards (`git checkout main && git pull`).
+
+This is the default — don't ask "should I open a PR?" each time; just do the whole cycle. Merging is what makes the change go live (the site auto-deploys when `main` updates). After it's done, tell the user in plain language what shipped.
+
+Other rules:
+
+- **Never commit directly to `main`.** Always go through a branch + PR, even for tiny changes.
 - **Commit messages: short and semantic.** Use Conventional Commit prefixes — `fix:`, `chore:`, `feat:`, `docs:`, `refactor:`. Keep the summary line brief.
 - **Do not add "Co-authored-by" or any authored-by trailers** to commits or PR descriptions.
-- Branch naming: `fix/...`, `chore/...`, `feat/...` (e.g. `fix/emailjs-credentials`).
-- After merging, sync local `main` (`git checkout main && git pull`).
+- If a change is risky, destructive, or could break the live site, pause and explain it simply before merging — don't auto-merge those blindly.
 
 ## What this is
 
