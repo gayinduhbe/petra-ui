@@ -46,11 +46,89 @@ function Reveal({ children, delay = 0 }) {
   );
 }
 
+/* ── Inline SVG icons (replace emoji) ──
+   Sized with 1em so they inherit the existing .srv-ico / .feat-ico font-size,
+   and coloured with the gold accent via currentColor. */
+const svgBase = {
+  viewBox: "0 0 24 24",
+  fill: "none",
+  stroke: "var(--gold, #C9A84C)",
+  strokeWidth: 1.6,
+  strokeLinecap: "round",
+  strokeLinejoin: "round",
+  width: "1em",
+  height: "1em",
+  "aria-hidden": "true",
+  style: { display: "block" },
+};
+
+const IconBuilding = () => (
+  <svg {...svgBase}>
+    <path d="M3 21h18" />
+    <path d="M5 21V8l5-3v16" />
+    <path d="M10 21V3l9 4v14" />
+    <line x1="13.5" y1="10" x2="15.5" y2="10" />
+    <line x1="13.5" y1="13" x2="15.5" y2="13" />
+    <line x1="13.5" y1="16" x2="15.5" y2="16" />
+  </svg>
+);
+
+const IconGear = () => (
+  <svg {...svgBase}>
+    <circle cx="12" cy="12" r="3" />
+    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V12a1.65 1.65 0 0 0 1.51 1z" />
+  </svg>
+);
+
+const IconKey = () => (
+  <svg {...svgBase}>
+    <circle cx="7.5" cy="16.5" r="3.5" />
+    <line x1="10" y1="14" x2="20" y2="4" />
+    <line x1="15.5" y1="8.5" x2="18" y2="11" />
+    <line x1="18" y1="6" x2="20" y2="8" />
+  </svg>
+);
+
+const IconBars = () => (
+  <svg {...svgBase}>
+    <line x1="3" y1="20" x2="21" y2="20" />
+    <line x1="6.5" y1="20" x2="6.5" y2="13" />
+    <line x1="12" y1="20" x2="12" y2="6" />
+    <line x1="17.5" y1="20" x2="17.5" y2="10" />
+  </svg>
+);
+
+const IconCompass = () => (
+  <svg {...svgBase}>
+    <circle cx="12" cy="4" r="1.5" />
+    <path d="M12 5.5 7 20" />
+    <path d="M12 5.5 17 20" />
+    <path d="M9.2 14h5.6" />
+  </svg>
+);
+
+const IconClipboard = () => (
+  <svg {...svgBase}>
+    <path d="M9 4H7a2 2 0 0 0-2 2v13a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-2" />
+    <rect x="9" y="2.5" width="6" height="3.5" rx="1" />
+    <line x1="8.5" y1="11" x2="15.5" y2="11" />
+    <line x1="8.5" y1="14.5" x2="15.5" y2="14.5" />
+    <line x1="8.5" y1="18" x2="12.5" y2="18" />
+  </svg>
+);
+
+const IconShield = () => (
+  <svg {...svgBase}>
+    <path d="M12 3 5 6v5c0 4.5 3 7.5 7 9 4-1.5 7-4.5 7-9V6l-7-3z" />
+    <path d="M9 12l2 2 4-4" />
+  </svg>
+);
+
 const services = [
-  { ico: "🏗️", title: "Civil Engineering", desc: "Reinforced concrete (RCC) structures, complex foundations, columns, slabs, masonry, plastering, and professional waterproofing.", n: "01" },
-  { ico: "⚙️", title: "Mechanical & Electrical (M&E)", desc: "Comprehensive building services including electrical distribution, plumbing, water/sanitary systems, HVAC, and ventilation coordination.", n: "02" },
-  { ico: "🔑", title: "Turnkey Delivery Model", desc: "End-to-end management from concept and first survey to design coordination, interior fit-outs, final handover, and after-care.", n: "03" },
-  { ico: "📊", title: "Project & Cost Management", desc: "Rigorous quantity surveying, transparent BOQ preparation, realistic cost estimation, on-site supervision, and strict timeline controls.", n: "04" },
+  { ico: <IconBuilding />, title: "Civil Engineering", desc: "Reinforced concrete (RCC) structures, complex foundations, columns, slabs, masonry, plastering, and professional waterproofing.", n: "01" },
+  { ico: <IconGear />, title: "Mechanical & Electrical (M&E)", desc: "Comprehensive building services including electrical distribution, plumbing, water/sanitary systems, HVAC, and ventilation coordination.", n: "02" },
+  { ico: <IconKey />, title: "Turnkey Delivery Model", desc: "End-to-end management from concept and first survey to design coordination, interior fit-outs, final handover, and after-care.", n: "03" },
+  { ico: <IconBars />, title: "Project & Cost Management", desc: "Rigorous quantity surveying, transparent BOQ preparation, realistic cost estimation, on-site supervision, and strict timeline controls.", n: "04" },
 ];
 
 /* ── Auto-detect all images from each project folder using Vite glob ── */
@@ -411,9 +489,9 @@ export default function PetraConstruction() {
                 
                 <div className="feat-list">
                   {[
-                    { ico: "🔩", t: "Engineering Rigour", d: "Every project stage is managed end-to-end by qualified engineers and chartered-route professionals." },
-                    { ico: "📊", t: "Honest Costing & BOQs", d: "Detailed quantity surveying keeps budgets transparent with absolute zero hidden cost surprises." },
-                    { ico: "🛡️", t: "Safety First & Luxury Craft", d: "Disciplined site management paired with interior finishes held strictly to high luxury standards." },
+                    { ico: <IconCompass />, t: "Engineering Rigour", d: "Every project stage is managed end-to-end by qualified engineers and chartered-route professionals." },
+                    { ico: <IconClipboard />, t: "Honest Costing & BOQs", d: "Detailed quantity surveying keeps budgets transparent with absolute zero hidden cost surprises." },
+                    { ico: <IconShield />, t: "Safety First & Luxury Craft", d: "Disciplined site management paired with interior finishes held strictly to high luxury standards." },
                   ].map((f, i) => (
                     <Reveal key={i} delay={i + 1}>
                       <div className="feat-row">
