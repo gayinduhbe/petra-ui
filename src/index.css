@@ -1,6 +1,5 @@
 /* ── External Fonts & Core Framework Utilities (Must be at the top) ── */
 @import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,500;0,9..40,700;1,9..40,300&family=DM+Mono:wght@400;500&display=swap');
-@import "tailwindcss"; 
 
 /* ── Global Typography & Layout Reset ── */
 html, body, #root {
@@ -12,10 +11,15 @@ html, body, #root {
   background: #0A0A0B !important;
 }
 
-* { 
-  box-sizing: border-box; 
-  margin: 0; 
-  padding: 0; 
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Form controls inherit the page font (previously provided by Tailwind preflight) */
+button, input, select, textarea {
+  font: inherit;
 }
 
 :root {
