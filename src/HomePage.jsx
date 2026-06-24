@@ -388,7 +388,7 @@ export default function PetraConstruction() {
             <div className="hero-glow" />
 
             <div className="hero-left">
-              <div className="hero-tag">Solid Foundations. Timeless Structures.</div>
+              <div className="hero-tag">On This Rock We Build</div>
               <h1 className="hero-h1">Engineering<em>Rigour</em></h1>
               <p className="hero-sub">Petra Construction Co. (Pvt.) Ltd. delivers precision-engineered residential, hotel, and commercial civil structures across Sri Lanka with absolute budget transparency and craftsmanship built to endure.</p>
               <div className="hero-btns">
@@ -577,7 +577,7 @@ export default function PetraConstruction() {
             <div className="ft-brand" onClick={() => go("home")} style={{ display: 'flex', alignItems: 'center', gap: '8px', cursor: 'pointer' }}>
               PETRA <span>CONSTRUCTION</span>
             </div>
-            <p className="ft-tag" style={{ color: '#aaa', fontSize: '0.85rem' }}>Petra Construction Co. (Pvt.) Ltd.<br />Solid Foundations. Timeless Structures.</p>
+            <p className="ft-tag" style={{ color: '#aaa', fontSize: '0.85rem' }}>Petra Construction Co. (Pvt.) Ltd.<br />On This Rock We Build</p>
           </div>
           <div>
             <div className="ft-ct">Navigation</div>
