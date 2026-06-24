@@ -388,8 +388,8 @@ export default function PetraConstruction() {
             <div className="hero-glow" />
 
             <div className="hero-left">
-              <div className="hero-tag">On This Rock We Build</div>
-              <h1 className="hero-h1">Engineering<em>Rigour</em></h1>
+              <div className="hero-tag">Civil & Structural Construction</div>
+              <h1 className="hero-h1">On This Rock<em>We Build</em></h1>
               <p className="hero-sub">Petra Construction Co. (Pvt.) Ltd. delivers precision-engineered residential, hotel, and commercial civil structures across Sri Lanka with absolute budget transparency and craftsmanship built to endure.</p>
               <div className="hero-btns">
                 <a href="#projects" className="btn-p" onClick={e => { e.preventDefault(); go("home","projects"); }}>Explore Portfolio</a>

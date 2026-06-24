@@ -1,5 +1,5 @@
-/* ── Core Framework Utilities (Must be at the top) ──
-   Site font is Times New Roman (a built-in system font), so no web-font import is needed. */
+/* ── External Fonts & Core Framework Utilities (Must be at the top) ── */
+@import url('https://fonts.googleapis.com/css2?family=Libertinus+Serif:ital,wght@0,400;0,600;0,700;1,400&display=swap');
 
 /* ── Global Typography & Layout Reset ── */
 html, body, #root {
@@ -47,9 +47,9 @@ button, input, select, textarea {
   --social-bg: rgba(17,17,21,0.5);
   --shadow: rgba(0, 0, 0, 0.4) 0 10px 15px -3px, rgba(0, 0, 0, 0.2) 0 4px 6px -2px;
 
-  --sans: 'Times New Roman', Times, serif;
-  --heading: 'Times New Roman', Times, serif;
-  --mono: 'Times New Roman', Times, serif;
+  --sans: 'Libertinus Serif', 'Times New Roman', Times, serif;
+  --heading: 'Libertinus Serif', 'Times New Roman', Times, serif;
+  --mono: 'Libertinus Serif', 'Times New Roman', Times, serif;
 
   font: 18px/145% var(--sans);
   letter-spacing: 0.18px;
@@ -939,7 +939,7 @@ code, .counter {
 }
 
 .contact-hero-h {
-  font-family: 'Times New Roman', Times, serif;
+  font-family: 'Libertinus Serif', 'Times New Roman', Times, serif;
   font-size: clamp(4rem, 8vw, 7.5rem); 
   line-height: 0.88; 
   letter-spacing: 2px;
@@ -1140,7 +1140,7 @@ code, .counter {
   gap: 1rem; 
 }
 .form-header-title { 
-  font-family: 'Times New Roman', Times, serif; 
+  font-family: 'Libertinus Serif', 'Times New Roman', Times, serif; 
   font-size: 1.8rem; 
   letter-spacing: 1px; 
   color: #ffffff !important; 
@@ -1276,7 +1276,7 @@ code, .counter {
 }
 .office-card:hover { border-color: rgba(201,168,76,0.25); transform: translateY(-2px); }
 .office-flag { font-size: 1.5rem; margin-bottom: 1rem; }
-.office-city { font-family: 'Times New Roman', Times, serif; font-size: 1.8rem; letter-spacing: 1px; color: #ffffff; margin-bottom: 2px; }
+.office-city { font-family: 'Libertinus Serif', 'Times New Roman', Times, serif; font-size: 1.8rem; letter-spacing: 1px; color: #ffffff; margin-bottom: 2px; }
 .office-role { font-size: 0.65rem; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; color: var(--gold); margin-bottom: 1.2rem; }
 .office-addr { font-size: 0.82rem; color: var(--mist); line-height: 1.6; white-space: pre-line; }
 
