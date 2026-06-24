@@ -12,6 +12,12 @@ This site is operated by a **non-technical person**. You are the one doing the t
 - Never break the live contact form or the build. When in doubt, ask before acting.
 - Don't assume the user can run terminal commands. **You** handle all the Git/code/deploy steps; only ask them to do something themselves if it truly requires their account or a manual login.
 
+## Content style (what appears on the site)
+
+- **No emojis anywhere in the site's visible content.** Use text labels, words, or CSS/SVG icons instead.
+- **No em dashes (—) in site copy.** Rewrite the sentence, or use a comma, colon, or simple hyphen (`-`) instead.
+- This applies to text users see on the page (headings, body copy, buttons, form labels, etc.). It does not restrict code comments or this CLAUDE.md file.
+
 ## Workflow rules (required)
 
 **For every code change, run the full cycle yourself — start to finish — without making the user do any Git steps:**
