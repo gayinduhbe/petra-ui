@@ -2,9 +2,9 @@ import React, { useState, useEffect, useRef } from 'react';
 import emailjs from '@emailjs/browser'; // 1. Import EmailJS
 
 // ── 2. Configure your EmailJS Credentials Here ──
-const EMAILJS_SERVICE_ID  = "service_mykypzl";
-const EMAILJS_TEMPLATE_ID = "template_gsgoysx";
-const EMAILJS_PUBLIC_KEY  = "2zhl8MT0mjuy2IDYb";
+const EMAILJS_SERVICE_ID  = "service_nhyt1op";
+const EMAILJS_TEMPLATE_ID = "template_rjfdr95";
+const EMAILJS_PUBLIC_KEY  = "_gk602RF70tysHHBC";
 
 const EMPTY_FORM = {
   name: '', email: '', projectLocation: '', phone: '',
