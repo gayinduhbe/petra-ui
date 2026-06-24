@@ -599,7 +599,7 @@ export default function PetraConstruction() {
             <div className="ft-ct">Office</div>
             <ul className="ft-links" style={{ fontSize: "0.85rem", color: "#ccc" }}>
               <li>71A Lake Road, Attidiya, Dehiwala</li>
-              <li>Phone: 077 735 6371</li>
+              <li>Phone: 077 735 6371 / 077 929 8315</li>
               <li>Email: <a href="mailto:petraconstructionlk@gmail.com">petraconstructionlk@gmail.com</a></li>
             </ul>
           </div>
