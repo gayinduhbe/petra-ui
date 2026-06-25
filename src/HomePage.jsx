@@ -318,6 +318,7 @@ const team = [
   { name: "Chitra Perera", role: "Chief Quantity Surveyor", desc: "City & Guilds (London), AMASI (London), MSST (London). Heads transparent cost planning, accurate BOQs, and quantity surveying." },
   { name: "Yasoda Srimal Abeykoon", role: "Construction Manager", desc: "HND in Quantity Surveying, University of Liverpool. Manages on-the-ground site execution, programming, and schedules." },
   { name: "Nimal Thanthriarachchi", role: "M&E Engineer", desc: "35 years of elite experience in the hospitality industry, specializing in complex air-conditioning, refrigeration, and heating." },
+  { name: "Ramya De Silva", role: "Secretary", desc: "Coordinates administration, client communication, and project documentation to keep delivery running smoothly." },
 ];
 
 const process = [
